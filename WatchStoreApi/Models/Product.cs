@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace WatchStoreApi.Models;
 
@@ -17,9 +18,17 @@ public class Product
     [JsonIgnore]
     public Category Category { get; set; }
 
-
+    [JsonIgnore]
     public ICollection<ShoppingCartItem> ShoppingCartItems { get; set; }
 
+    [JsonIgnore]
     public ICollection<OrderDetail> OrderDetails { get; set; }
+
+    /// <summary>
+    /// 文件类型
+    /// </summary>
+    [NotMapped]
+    [JsonIgnore]
+    public IFormFile Image { get; set; }
 
 }
