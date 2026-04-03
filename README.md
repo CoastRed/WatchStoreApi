@@ -324,6 +324,15 @@ public async Task<IActionResult> Delete(int id)
 
 
 
+# 接口调试
+
+项目开发时使用ApiPost作为接口调试工具，版本为8.2.6
+
+在doc文件夹中已经导出接口项目文件，提供`swagger`和`apipost`2种格式的导出文件，导入对应的接口调试工具中即可使用：
+
+- swagger：WatchStoreApi.openapi.3.0.json
+- apipost：WatchStoreApi.json
+
 
 
 

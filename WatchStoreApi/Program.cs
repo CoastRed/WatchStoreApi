@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<ApiDbContext>(options =>
 {
-    options.UseSqlServer("Data Source=localhost;Initial Catalog=WatchStoreDb;Integrated Security=True;TrustServerCertificate=True;");
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 
